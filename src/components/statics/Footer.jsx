@@ -1,10 +1,10 @@
 import React from 'react'
-import './stylestatics.css'
+import './styleStatics.css'
 
 const Footer = () => {
   return (
     <footer>
-      <p>&copy;2025 FunkosLokos - Todos los derechos reservados </p>
+      <p><b>&copy; 2025 FUNKOS LOKOS | Todos los derechos reservados.</b></p>
     </footer>
   )
 }

@@ -4,6 +4,10 @@ nav{
     padding: 10px;
 }
 
+.logo-img{
+    height: 70px;
+}
+
 ul{
     list-style: none;
     margin: 0;
@@ -23,4 +27,14 @@ footer{
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+.btnCart{
+    background-color: transparent;
+    border: none;   
+}
+
+.fa-cart-shopping{
+    color: white;
+    font-size: 24px;
 }
