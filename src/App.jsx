@@ -1,73 +1,42 @@
-import { useState, useEffect } from 'react'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './views/Home'
 import Contacto from './views/Contacto'
 import AcercaDe from './views/AcercaDe'
 import Galeria from './views/Galeria'
 import NotFound from './views/NotFound'
+import DetallesProductos from './components/DetallesProductos'
+import Admin from './views/Admin'
+import Login from './views/Login'
+import RutasProtegidas from './routes/RutasProtegidas'
+import { useContext } from 'react'
+import { CartContext } from './context/CartContext'
 
 function App() {
 
-  const [cart, setCart] = useState([])
-  const [productos, setProductos] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
-
-  useEffect(() => {
-    fetch('/data/productos.json')
-      .then(response => response.json())
-      .then(data => {
-        setTimeout(() => {
-          setProductos(data)
-          setLoading(false)
-        }, 2000)
-      }
-      )
-      .catch(err => {
-        console.log('Error', err)
-        setLoading(false)
-        setError(true)
-      })
-  }, [])
-
-  const handleAddToCart = (producto) => {
-    const existingProduct = cart.find(item => item.id === producto.id)
-    if (existingProduct) {
-      setCart(cart.map(item =>
-        item.id === producto.id ? { ...item, quantity: item.quantity + 1 } : item ))
-    } else {
-      setCart([...cart, { ...producto, quantity: 1 }])
-    }
-  }
-
-  const handleDeleteFromCart = (producto) => {
-    setCart(prevCart => {
-      return prevCart.map(item => {
-        if (item.id === producto.id) {
-          if (item.quantity > 1) {
-            return { ...item, quantity: item.quantity - 1 }
-          } else {
-            return null
-          }
-        } else {
-          return item
-        }
-      }).filter(item => item != null);
-    });
-  };
+  const { isAuthenticated } = useContext(CartContext);
 
   return (
 
-    <Router>
       <Routes>
-        <Route path="/" element={<Home borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} loading={loading} />} />
-        <Route path="/acercade" element={<AcercaDe cart={cart} borrarProducto={handleDeleteFromCart}/>} />
-        <Route path="/galeria" element={<Galeria agregarCarrito={handleAddToCart} cart={cart} productos={productos} loading={loading} borrarProducto={handleDeleteFromCart}/>} />
-        <Route path="/contacto" element={<Contacto cart={cart} borrarProducto={handleDeleteFromCart}/>} />
+        <Route path="/" element={<Home />} />
+
+        <Route path="/acercade" element={<AcercaDe />} />
+
+        <Route path="/galeria" element={<Galeria />} />
+
+        <Route path="/galeria/:id" element={<DetallesProductos />} />
+
+        <Route path="/contacto" element={<Contacto />} />
+
+        <Route path="/admin" element={<RutasProtegidas isAuthenticated={isAuthenticated}>
+          <Admin />
+        </RutasProtegidas>} />
+
+        <Route path="/login" element={<Login />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Router>
 
   )
 }

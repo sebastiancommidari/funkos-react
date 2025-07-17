@@ -4,7 +4,7 @@ import './styleStatics.css'
 const Footer = () => {
   return (
     <footer>
-      <p><b>&copy; 2025 FUNKOS LOKOS | Todos los derechos reservados.</b></p>
+      <p className='sombreadoTitulos'><b>&copy; 2025 FUNKOS LOKOS | Todos los derechos reservados.</b></p>
     </footer>
   )
 }

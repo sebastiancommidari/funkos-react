@@ -8,13 +8,13 @@ const Galeria = ({ agregarCarrito, cart, productos, loading, borrarProducto }) =
   return (
     <>
       <Header borrarProducto={borrarProducto} cartItems={cart} />
-      <h1>Galería de Productos</h1>
+      <h1 className='sombreadoTitulos' style={{marginTop:'1em', marginBottom:'1em'}}>Galería de Productos</h1>
 
       {
         loading ? (
           <div style={{ textAlign: 'center' }}>
             <img src={loadingGif} alt="Loading..." className="loading-img" />
-            <p style={{ fontSize: '38px', color: '#FFFFFF', fontWeight: '700' }}>Ya casi llego...!</p>
+            <p className='sombreadoTitulos' style={{ fontSize: '38px', color: '#FFFFFF', fontWeight: '700' }}>Esperame...!</p>
           </div>
         ) : (
           <ProductList agregarCarrito={agregarCarrito} productos={productos} />
