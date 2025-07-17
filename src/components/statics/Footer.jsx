@@ -1,5 +1,5 @@
 import React from 'react'
-import './styleStatics.css'
+import './stylestatics.css'
 
 const Footer = () => {
   return (
