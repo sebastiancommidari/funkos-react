@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
-import './styleStatics.css'
+import './stylestatics.css'
 import Cart from '../Cart'
 import { FaShoppingCart } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
