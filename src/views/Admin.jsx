@@ -22,7 +22,7 @@ const Admin = () => {
         setSeleccionado,
         agregarProducto,
         actulizarProducto,
-        eliminarProducto, 
+        eliminarProducto,
     } = useContext(AdminContext)
 
     const navigate = useNavigate()
@@ -36,7 +36,7 @@ const Admin = () => {
                     <nav>
                         <ul className="nav">
                             <li className="navItem">
-                                <button className="navButton" onClick={() => {
+                                <button className="navButton sombreadoTitulos" onClick={() => {
                                     setIsAuth(false);
                                     navigate('/');
                                     localStorage.removeItem('isAuth');
@@ -44,16 +44,21 @@ const Admin = () => {
                                     <i className="fa-solid fa-right-from-bracket"></i>
                                 </button>
                             </li>
-                            <li className="navItem">
+                            <li className="navItem sombreadoTitulos">
                                 <a href="/admin">Admin</a>
                             </li>
                         </ul>
                     </nav>
-                    <h1 className="title">Panel Administrativo</h1>
+                    <h1 className="title sombreadoTitulos">Panel Administrativo</h1>
 
-                                <button onClick={() => setOpen(true)}>Agregar producto nuevo</button>
-            {open && (<FormularioProducto onAgregar={agregarProducto} />)}
-            {openEditor && (<FormularioEdicion productoSeleccionado={seleccionado} onActualizar={actulizarProducto} />)}
+                    <button
+                        onClick={() => setOpen(true)}
+                        style={{ marginBottom: '2rem' }}
+                    >
+                        Agregar producto nuevo
+                    </button>
+                    {open && (<FormularioProducto onAgregar={agregarProducto} />)}
+                    {openEditor && (<FormularioEdicion productoSeleccionado={seleccionado} onActualizar={actulizarProducto} />)}
 
                     <ul className="list">
                         {productos.map((product) => (
@@ -66,10 +71,16 @@ const Admin = () => {
                                 <span>{product.nombre}</span>
                                 <span>${product.precio}</span>
                                 <div>
-                                    <button className="editButton" onClick={() => {
-                                        setOpenEditor(true)
-                                        setSeleccionado(product)
-                                    }}>Editar</button>
+                                    <button
+                                        className="editButton"
+                                        onClick={() => {
+                                            setOpenEditor(true);
+                                            setSeleccionado(product);
+                                            window.scrollTo({ top: 100, behavior: 'smooth' });
+                                        }}
+                                    >
+                                        Editar
+                                    </button>
 
                                     <button className="deleteButton" onClick={() => eliminarProducto(product.id)}>Eliminar</button>
                                 </div>

@@ -47,12 +47,13 @@
 .fa-trash {
     cursor: pointer;
     font-size: 15px;
-    padding: 0;
+    padding: 0 ;
+
 }
 
 .btnCheckout {
-  background-color: #2563eb;
-  color: #fff;
+  background-color: #403371;
+  color: #fff !important;
   border: none;
   padding: 0.7em 1.5em;
   font-weight: bold;
@@ -60,5 +61,5 @@
   cursor: pointer;
 }
 .btnCheckout:hover {
-  background-color: #1e4dc3;
+  background-color: #482375;
 }

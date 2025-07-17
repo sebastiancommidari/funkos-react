@@ -17,8 +17,8 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
             e.preventDefault()
             onActualizar(producto)
         }}>
-            <h2>Editar Producto</h2>
-            <div>
+            <h2 className='sombreadoTitulos mb-4'>Editar Producto</h2>
+            <div style={{ marginBottom: '0.6rem' }}>
                 <label>ID:</label>
                 <input
                     type="number"
@@ -26,9 +26,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     value={producto.id || ''}
                     onChange={handleChange}
                     readOnly
+                                        style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '80px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
+
                 />
             </div>
-            <div>
+            <div style={{ marginBottom: '0.6rem' }}>
                 <label>Nombre:</label>
                 <input
                     type="text"
@@ -36,9 +38,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     value={producto.nombre || ''}
                     onChange={handleChange}
                     required
+                                        style={{ padding:'5px',  marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
+
                 />
             </div>
-            <div>
+            <div style={{ marginBottom: '0.6rem' }}>
                 <label>Precio:</label>
                 <input
                     type="number"
@@ -47,9 +51,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     onChange={handleChange}
                     required
                     min="0"
+                                        style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '200px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
+
                 />
             </div>
-            <div>
+            <div style={{ marginBottom: '0.6rem' }}>
                 <label>stock:</label>
                 <input
                     type="number"
@@ -57,9 +63,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     value={producto.stock || ''}
                     onChange={handleChange}
                     required
+                                        style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
+
                 />
             </div>
-            <div>
+            <div style={{ marginBottom: '0.6rem' }}>
                 <label>Imagen URL:</label>
                 <input
                     type="text"
@@ -67,9 +75,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     value={producto.imagen || ''}
                     onChange={handleChange}
                     required
+                                        style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
+
                 />
             </div>
-            <div>
+            <div style={{ marginBottom: '0.6rem' }}>
                 <label>Categoria:</label>
                 <input
                     type="text"
@@ -77,9 +87,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     value={producto.categoria || ''}
                     onChange={handleChange}
                     required
+                                        style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
+
                 />
             </div>
-            <button type="submit">Actualizar Producto</button>
+            <button type="submit" style={{ marginBottom: '2rem' }}>Actualizar Producto</button>
         </form>
     );
 }

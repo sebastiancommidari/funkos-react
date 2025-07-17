@@ -47,10 +47,3 @@ button:hover, .link:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
-
-@media screen and (max-width: 768px) {
-#root {
-padding: 1em ;
-}
-  
-}

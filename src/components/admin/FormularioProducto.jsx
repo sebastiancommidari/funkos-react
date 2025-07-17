@@ -48,55 +48,58 @@ function FormularioProducto({ onAgregar }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h2>Agregar Producto</h2>
-            <div>
-                <label>Nombre:</label>
+            <h2 className='sombreadoTitulos mb-4'>Agregar Producto</h2>
+            <div style={{ marginBottom: '0.6rem' }}>
+                <label style={{ marginRight: '0.4rem' }}>Nombre:</label>
                 <input
-                    type="text" name="nombre" value={producto.nombre} onChange={handleChange} required />
+                    type="text" name="nombre" value={producto.nombre} onChange={handleChange} required style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}/>
                 {errores.nombre && <p style={{ color: 'red' }}>{errores.nombre}</p>}
             </div>
-            <div>
-                <label>Precio:</label>
-                <input type="number" name="precio" value={producto.precio} onChange={handleChange} required
+            <div style={{ marginBottom: '0.6rem' }}>
+                <label style={{ marginRight: '0.4rem' }}>Precio:</label>
+                <input type="number" name="precio" value={producto.precio} onChange={handleChange} required style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
                     min="0" />
                 {errores.precio && <p style={{ color: 'red' }}>{errores.precio}</p>}
             </div>
 
-            <div>
-                <label>Stock:</label>
+            <div style={{ marginBottom: '0.6rem' }}>
+                <label style={{ marginRight: '0.4rem' }}>Stock:</label>
                 <input
                     type="number"
                     name="stock"
                     value={producto.stock || ''}
                     onChange={handleChange}
                     required
+                    style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
                 />
                 {errores.stock && <p style={{ color: 'red' }}>{errores.stock}</p>}
             </div>
-            <div>
-                <label>Imagen URL:</label>
+            <div style={{ marginBottom: '0.6rem' }}>
+                <label style={{ marginRight: '0.4rem' }}>Imagen URL:</label>
                 <input
                     type="text"
                     name="imagen"
                     value={producto.imagen || ''}
                     onChange={handleChange}
                     required
+                    style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
                 />
                 {errores.imagen && <p style={{ color: 'red' }}>{errores.imagen}</p>}
             </div>
-            <div>
-                <label>Categoría:</label>
+            <div style={{ marginBottom: '0.6rem' }}>
+                <label style={{ marginRight: '0.4rem' }}>Categoría:</label>
                 <input
                     type="text"
                     name="categoria"
                     value={producto.categoria || ''}
                     onChange={handleChange}
                     required
+                    style={{ padding:'5px',marginRight: '0.4rem', width: '100%', maxWidth: '300px', backgroundColor: '#f0f0f0', borderRadius: '4px', border: '1px solid #ccc', color: '#333' }}
                 />
                 {errores.categoria && <p style={{ color: 'red' }}>{errores.categoria}</p>}
             </div>
 
-            <button type="submit">Agregar Producto</button>
+            <button type="submit" style={{ marginBottom: '2rem' }}>Agregar Producto</button>
         </form>
     );
 }

@@ -9,8 +9,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #510d1b;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  color: #ffffff;
   font-family: 'Sour Gummy', sans-serif;
 }
 
@@ -24,14 +23,14 @@
 .navItem a {
   text-decoration: none;
   font-weight: bold;
-  color: #510d1b;
+  color: #ffffff;
 }
 
 .navButton {
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
-  color: #510d1b;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -55,7 +54,7 @@
 .listItemImage {
   width: 180px;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -70,20 +69,19 @@
 }
 
 .editButton {
-  background-color: #2563eb;
+  background-color: #676e7d;
   color: white;
 }
 
 .deleteButton {
-  background-color: #c00;
+  background-color: rgb(142, 53, 53);
   color: white;
 }
 
 .editButton:hover {
-  background-color: #1e4dc3;
+  background-color: #862f86;
 }
 
 .deleteButton:hover {
-  background-color: #900;
+  background-color: rgb(159, 22, 147);
 }
-

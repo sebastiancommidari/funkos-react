@@ -19,8 +19,9 @@ const ProductList = () => {
       <div style={{
         display: 'flex',
         flexWrap: 'wrap',
-        gap: '20px',
-        justifyContent: 'center'
+        gap: '25px',
+        justifyContent: 'center',
+        padding: '0 20px',
       }}>
         {
           productosFiltrados.map(producto =>

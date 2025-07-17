@@ -13,7 +13,7 @@ const Home = ({ agregarCarrito }) => {
     <>
       <Header />
 
-      <main className="sombreadoTitulos">
+      <main className="sombreadoTitulos" style={{ padding:'0.9em' }}>
         <h1 style={{ fontSize: '3.5rem', marginTop:'0.7em' }}>Bienvenidos a FUNKOS LOKOS</h1>
         <p style={{ fontSize: '20px', marginBottom:'2em' }} >Tenemos las mejores figuras de colección y los mejores funkos del mundo</p>
       </main>

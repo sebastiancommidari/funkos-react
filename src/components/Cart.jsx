@@ -18,16 +18,23 @@ const Cart = ({ isOpen, onClose }) => {
                 ) : (<>
                     <ul className='cart-item'>
                         {cart.map((item) => (
-                            <li key={item.id} style={{ color: 'black' }}>
-                                {item.cantidad} x {item.nombre} - ${item.precio * item.cantidad}
-                                <button onClick={() => handleDeleteFromCart(item)}>
+                            <li key={item.id} style={{
+                                color: 'black',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                padding: '0.5rem 0',
+                                fontSize: '18px',
+                            }}>
+                                <span>{item.cantidad} x {item.nombre} - ${item.precio * item.cantidad}</span>
+                                <button onClick={() => handleDeleteFromCart(item)} style={{ marginLeft: '1rem' }}>
                                     <i className="fa-solid fa-trash"></i>
                                 </button>
                             </li>
                         ))}
                     </ul>
                     <div className="cart-footer">
-                        <p style={{ color: 'blue' }}>
+                        <p style={{ color: 'black', fontWeight: 'bold', fontSize: '24px', borderBlockColor: 'black', borderBlockWidth: '1px', borderBlockStyle: 'solid', padding: '0.5em' }}>
                             Total: ${cart.reduce((total, item) => total + (item.precio * item.cantidad), 0)}
                         </p>
                         <button style={{ color: 'black' }} onClick={() => clearCart()} className="btnCheckout">
