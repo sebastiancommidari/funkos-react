@@ -22,7 +22,7 @@ const Login = () => {
                 }}
             >
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <label htmlFor="formBasicEmail" style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                    <label className="sombreadoTitulos" htmlFor="formBasicEmail" style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>
                         Email address
                     </label>
                     <input
@@ -46,7 +46,7 @@ const Login = () => {
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <label htmlFor="formBasicPassword" style={{ marginTop: '0.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                    <label className="sombreadoTitulos" htmlFor="formBasicPassword" style={{ marginTop: '0.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>
                         Password
                     </label>
                     <input
