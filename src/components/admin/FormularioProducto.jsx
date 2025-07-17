@@ -36,14 +36,14 @@ function FormularioProducto({ onAgregar }) {
         if (!validarFormulario()) {
             return;
         }
-        onAgregar(producto); // Llamada a la función para agregar el producto
+        onAgregar(producto);
         setProducto({
             nombre: '',
             precio: '',
             stock: '',
             imagen: '',
             categoria: '',
-        }); // Limpiar el formulario
+        });
     };
 
     return (

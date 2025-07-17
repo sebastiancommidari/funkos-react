@@ -8,7 +8,6 @@ const DetallesProductos = () => {
     const { id } = useParams();
     const { productos } = useContext(CartContext);
 
-    // Esperar a que productos esté cargado
     if (!productos || productos.length === 0) {
         return (
             <>
@@ -23,7 +22,6 @@ const DetallesProductos = () => {
 
     const product = productos.find((producto) => String(producto.id) === String(id));
 
-    // Si no se encuentra el producto
 if (!product) {
   return (
     <>
