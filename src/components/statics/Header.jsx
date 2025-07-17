@@ -4,6 +4,7 @@ import './stylestatics.css'
 import Cart from '../Cart'
 import { FaShoppingCart } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
+import logo from '../../assets/img/FUNKOS_LOKOS.png'
 
 const Header = () => {
 
@@ -13,7 +14,7 @@ const Header = () => {
         <header>
           <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container-fluid">
-              <NavLink className="navbar-brand logo" to="/"><img src="../src/assets/img/FUNKOS_LOKOS.png" alt="Funkos Lokos Logo" className="logo-img"/></NavLink>
+              <NavLink className="navbar-brand logo" to="/"><img src={logo} alt="Funkos Lokos Logo" className="logo-img"/></NavLink>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
