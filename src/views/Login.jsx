@@ -83,7 +83,7 @@ const Login = () => {
                         marginBottom: '3.5rem',
                     }}
                 >
-                    Submit
+                    Ingresar
                 </button>
             </form>
         </>

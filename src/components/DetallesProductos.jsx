@@ -75,7 +75,7 @@ if (!product) {
                         style={{
                             width: '100%',
                             maxWidth: '400px',
-                            height: 'auto',
+                            height: '400px',
                             objectFit: 'contain',
                             borderRadius: '8px',
                             marginBottom: '1.5rem',
